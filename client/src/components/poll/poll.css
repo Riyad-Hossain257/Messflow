@@ -1,0 +1,57 @@
+.form_poll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.poll_date {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid lightgray;
+}
+.add_item_btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #32a89e;
+  color: white;
+}
+.add_item_btn:hover {
+  background-color: #276963;
+  cursor: pointer;
+}
+.poll_new_items {
+  background-color: #3f72c4;
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+.poll_new_items:hover {
+  background-color: #333191;
+}
+#select_shift {
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid lightgray;
+}
+.input_list {
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid lightgray;
+  width: 100%;
+}
+.dynamic_input {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.dynamic_input > span {
+  color: red;
+  cursor: pointer;
+}

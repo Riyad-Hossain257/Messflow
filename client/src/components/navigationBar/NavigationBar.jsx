@@ -59,6 +59,7 @@ const NavigationBar = () => {
                     Dashboard
                   </Nav.Link>
                 )}
+
                 {showManagerBoard && (
                   <Nav.Link
                     eventKey="2"
@@ -98,6 +99,7 @@ const NavigationBar = () => {
                     </Nav.Link>
                   </div>
                 ) : null
+
                 // <div className="navbar-nav ml-auto">
                 //   <Nav.Link
                 //     eventKey="7"

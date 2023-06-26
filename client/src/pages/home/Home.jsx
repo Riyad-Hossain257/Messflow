@@ -16,7 +16,7 @@ const Home = () => {
                   <div className="col">
                     <div className="card-body ">
                       <div className="text-center">
-                        <img src={logo} alt="logo" height="120px" />
+                        <img src={logo} alt="logo" height="150px" />
                       </div>
 
                       <Login />
@@ -24,13 +24,13 @@ const Home = () => {
                       <div className="d-flex gap-2 align-items-center justify-content-center pb-4 mt-5">
                         <Link
                           to="/userRegister"
-                          className="text-decoration-none"
+                          className="text-decoration-none text-white"
                         >
                           Get in an existing mess?
                         </Link>
                         <Link
                           to="/manRegister"
-                          className="text-decoration-none"
+                          className="text-decoration-none text-white"
                         >
                           Create a new mess?
                         </Link>

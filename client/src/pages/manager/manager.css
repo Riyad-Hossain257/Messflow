@@ -1,10 +1,17 @@
 .moderatorWraper {
-  background: rgb(156, 149, 149);
+  /* background: rgb(156, 149, 149);
   background: linear-gradient(
     90deg,
     rgba(156, 149, 149, 1) 0%,
     rgba(160, 177, 177, 1) 50%,
     rgba(122, 129, 129, 1) 100%
+  ); */
+  background: rgb(12, 78, 79);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 78, 79, 1) 0%,
+    rgba(61, 142, 125, 1) 50%,
+    rgba(12, 78, 79, 1) 100%
   );
   height: calc(100vh - 65px);
   overflow-y: auto;

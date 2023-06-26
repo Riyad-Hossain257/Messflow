@@ -197,7 +197,7 @@ const Dashboard = () => {
           <div className="col-md-6 mt-5">
             <BarChart data={data} />
           </div>
-          <div className="col-md-6 mt-5">
+          <div className=" col-md-6 mt-5">
             <LineChart data={data} />
           </div>
           <div className=" col-12 my-5">
@@ -214,7 +214,11 @@ const Dashboard = () => {
               <TableView
                 columnDefs={[
                   // { headerName: 'User Id', field: 'userId' },
-                  { headerName: 'User Name', field: 'name', flex: 1 },
+                  {
+                    headerName: 'User Name',
+                    field: 'name',
+                    flex: 1,
+                  },
                   { headerName: 'Morning', field: 'morning', flex: 1 },
                   { headerName: 'Day', field: 'day', flex: 1 },
                   { headerName: 'Night', field: 'night', flex: 1 },

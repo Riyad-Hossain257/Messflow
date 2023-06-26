@@ -16,6 +16,7 @@ import {
 import { reloadingOn, reloadingOff } from '../../redux/slices/reload';
 import { getMessInfo } from '../../redux/slices/messSlice';
 import { clearMessage } from '../../redux/slices/message';
+import FoodMenuPoll from '../manager/components/FoodMenuPoll';
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const Profile = () => {
   const { monthlyUserMeal, monthlyUserBill, monthlyMealRate } = useSelector(
     (state) => state.userInfo
   );
-  console.log(monthlyUserBill);
+
   const { user } = useSelector((state) => state.auth);
 
   const { messInfo } = useSelector((state) => state.mess);
@@ -86,7 +87,7 @@ const Profile = () => {
     //   hour: "numeric",
     //   hour12: true,
     // });
-    console.log(new Date(params.value).toUTCString());
+    // console.log(new Date(params.value).toUTCString());
     return new Date(params.value).toUTCString();
   }
 
@@ -108,7 +109,7 @@ const Profile = () => {
           <div className="col-md-4 text-center">
             <img alt="img_logo" src={userImg} width="200px" />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 text-white">
             <div className="h1">{user.name}</div>
             <div className="h5">Mobile No: {user.phone}</div>
             <div className="h5">Email: {user.email}</div>
@@ -117,9 +118,9 @@ const Profile = () => {
 
         <hr />
 
-        <div className="row my-5">
-          <div className="col-md-3">
-            <Cards name="Total Payable (mess)" value={totalMBPayable} />
+        <div className=" row my-5">
+          <div className=" col-md-3">
+            <Cards name=" Total Payable (mess)" value={totalMBPayable} />
           </div>
           <div className="col-md-3">
             <Cards name="Total Paid (mess)" value={totalMBPaid} />
@@ -156,7 +157,7 @@ const Profile = () => {
 
         <hr />
 
-        <div className="my-5 card bg-transparent clearfix p-4">
+        <div className="my-5 card text-white bg-transparent clearfix p-4">
           <div className="h3 mb-4 text-uppercase">
             Enter meal information for today
           </div>
@@ -217,11 +218,13 @@ const Profile = () => {
           </Formik>
         </div>
 
+        <FoodMenuPoll />
+
         <hr />
 
-        <div className="card mt-4 bg-transparent">
+        <div className="card text-white mt-4 bg-transparent">
           <div className="h3 m-4">Meal Details</div>
-          <div className="card-body">
+          <div className="card-body ">
             <div>
               <TableView
                 columnDefs={[
@@ -229,6 +232,7 @@ const Profile = () => {
                     headerName: 'Date',
                     field: 'date',
                     valueFormatter: dateFormatter,
+
                     flex: 1,
                   },
                   { headerName: 'Morning', field: 'morning', flex: 1 },

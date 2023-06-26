@@ -13,7 +13,7 @@ import UpdateExpense from '../../components/createExpense/UpdateExpense';
 import UpdateBill from '../../components/CreateBill/UpdateBill';
 import FindUserDetails from '../../components/findUser/FindUserDetails';
 import UpdateMeal from '../../components/meal/UpdateMeal';
-
+import CreatePoll from '../../components/poll/CreatePoll';
 import {
   getMessInfo,
   getMonthlyBill,
@@ -22,6 +22,7 @@ import {
 import { getAllMonthlyMeal } from '../../redux/slices/userSlice';
 import { reloadingOn, reloadingOff } from '../../redux/slices/reload';
 import Confirmation from '../../components/confirmation/Confirmation';
+import FoodMenuPoll from './components/FoodMenuPoll';
 
 const Manager = () => {
   const [confirmationShow, setConfirmationShow] = React.useState(false);
@@ -42,7 +43,6 @@ const Manager = () => {
   const [mealDataUp, setMealDataUp] = React.useState({});
 
   const [findUsers, setFindUsers] = React.useState(false);
-
   const [startDate, setStartDate] = React.useState(new Date());
   const month = startDate.getMonth() + 1;
   const year = startDate.getFullYear();
@@ -298,7 +298,7 @@ const Manager = () => {
               </Button>
             </div>
             {/* Bill Table */}
-            <div className="card-body">
+            <div className="card-body text-white">
               <h4 className="text-center">Bills</h4>
               <TableView
                 columnDefs={[
@@ -344,7 +344,7 @@ const Manager = () => {
               />
             </div>
             {/* Meal Info */}
-            <div className="card-body">
+            <div className="card-body text-white">
               <h4 className="text-center">All Meals</h4>
               <TableView
                 columnDefs={[

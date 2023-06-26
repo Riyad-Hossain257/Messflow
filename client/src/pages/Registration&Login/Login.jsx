@@ -64,7 +64,7 @@ const Login = () => {
           </div>
         </div>
       )}
-      <h5 className="text-center color">Login</h5>
+      <h5 className="text-center color ">Login</h5>
       <div
         style={{ height: 'cal(100vh-500px)' }}
         className="container  d-flex align-item-center justify-content-center"

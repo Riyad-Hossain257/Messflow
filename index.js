@@ -21,6 +21,7 @@ require('./app/Passport')(passport);
 app.use('/api', require('./app/routers/login&regRoutes'));
 app.use('/api', require('./app/routers/manager.routes'));
 app.use('/api', require('./app/routers/common.routes'));
+app.use('/api/poll', require('./app/routers/poll.routes'));
 
 const port = process.env.port || 4000;
 app.listen(port, () => {
